@@ -32,9 +32,10 @@ against source decay.
 
 ## What it can do
 
-Timing, sequencing, delay, addition, integration, threshold comparison, 
-Boolean AND/OR, bang-bang process control, dose integration, rate 
-detection, self-dating beacon.
+Threshold detection, addition by charge accumulation, integration,
+ratio measurement, dose integration, event-based sequencing,
+Boolean AND/OR, bang-bang process control, rate detection,
+self-dating beacon.
 
 ## What it cannot do
 

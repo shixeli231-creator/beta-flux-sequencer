@@ -1,0 +1,9 @@
+cff-version: 1.2.0
+message: "If you use this work, please cite it as below."
+authors:
+  - alias: "Furumiri"
+title: "Beta-Flux Sequencer: A Semiconductor-Free, Radiation-Powered Architecture for Long-Duration Control"
+version: 0.1.0
+date-released: "2026"
+url: "https://github.com/shixeli231-creator/beta-flux-sequencer"
+license: CC-BY-NC-ND-4.0

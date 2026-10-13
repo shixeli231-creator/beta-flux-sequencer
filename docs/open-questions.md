@@ -13,15 +13,10 @@ across two count-to-threshold cycles. If leakage is too high, the
 second operand is wrong.
 
 **What we think:** Electrometer-grade capacitors (PTFE, polystyrene,
-NP0 ceramic) have leakage in the 1–10 fA range — 100–1000× below the
-4 pA beam current per lane. A 1 pF cap at 50 V should hold its value
-for minutes. Over the seconds between cycles, loss is negligible.
-
-**Precedent:** Haim et al., "An experimental apparatus for study of
-direct β-radiation conversion for energy harvesting" (arXiv, 2014)
-demonstrated a Ni-63 source producing 20 pA charging a parallel-plate
-capacitor in vacuum, with ultra-low leakage achieved using Teflon
-support structures.
+NP0 ceramic) have leakage in the 1–10 fA range. At the corrected beam
+current per lane of 8–40 pA, this is 1000–4000× below the signal. A
+1 pF cap at 16 V holds 16 pC; at 10 fA leakage the time constant is
+~1600 s. Over the seconds between cycles, loss is under 0.5%.
 
 **How to test:** Macro demonstrator, experiment 2. Charge to threshold,
 disconnect source, measure voltage decay.
@@ -44,8 +39,8 @@ beam source, measure transmission in open and closed states.
 **Question:** Does comparator input bias current load the integrator
 node at sub-nA currents?
 
-**Why it matters:** At sub-nA, input bias current can be a significant
-fraction of the signal current.
+**Why it matters:** At the pA level, input bias current can be a
+significant fraction of the signal current.
 
 **What we think:** Need a low-bias part (LMC6001, LMP7721) or a buffer
 topology. The LM393 in the macro demonstrator may not scale down.
@@ -80,14 +75,14 @@ protection. Specific threat level needs definition.
 **How to test:** Build a non-radioactive prototype, expose to a
 specified EMP environment, verify function.
 
-## 6. Threshold voltage and switch type
+## 6. Switch type decision
 
-**Question:** MEMS pull-in switch (5–30 V) or thyratron/spark gap
+**Question:** MEMS pull-in switch (8–16 V) or thyratron/spark gap
 (50–100 V)?
 
-**Why it matters:** This determines charge time. A MEMS switch at 10 V
-trips in ~2.5 s. A thyratron at 50 V trips in ~12.5 s. Both are valid;
-they lead to different designs.
+**Why it matters:** This determines charge time. A MEMS switch at 16 V
+trips in ~0.4–2 s depending on beam current. A thyratron at 50 V trips
+in ~3–12 s. Both are valid; they lead to different designs.
 
 **What we think:** MEMS for compactness, thyratron for higher voltage
 margin and simpler output driving.
@@ -107,3 +102,20 @@ the individual components are known but the combination is not.
 USPTO, EPO), academic literature (IEEE, Google Scholar), with terms
 covering betavoltaics, MEMS logic, charge integration, and mechanical
 computing.
+
+## 8. Citation verification
+
+**Question:** Are the specific figures attributed to external sources
+correct?
+
+**Why it matters:** Several claims in the design study reference
+external papers and specifications. Some of these were paraphrased
+from memory during drafting and need verification before formal
+citation.
+
+**What we think:** The general principles are correct. Specific
+numbers (beam currents, drift rates, insulation resistance) may need
+adjustment.
+
+**How to test:** Verify each citation against the original source
+before formal publication or competition submission.

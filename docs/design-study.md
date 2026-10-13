@@ -500,9 +500,8 @@ threat, verified by test.*
 
 ### 7.1 What the Device Can Do
 
-**Timing and sequencing.** Delay and timer functions, multi-stage
-sequencing, clock division, pulse trains, and commutation (the spinning
-source performs this natively).
+This device is a charge accumulator, not a wall-clock timer. Operations fire at a preset charge threshold.
+Source decay makes an operation take longer, but does not change the value it produces.
 
 **Arithmetic and signal.** Addition by charge summing, integration (the
 capacitor literally integrates current over time), ratio measurement

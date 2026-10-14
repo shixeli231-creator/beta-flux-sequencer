@@ -4,8 +4,8 @@ A design study for a semiconductor-free, radiation-powered sequencer for
 timing and control of heavy machinery in environments where conventional
 electronics fail (EMP, high total ionizing dose, no resupply).
 
-**Status:** Design study. No prototype built. Open for feedback and
-collaboration.
+**Status:** v0.1.0-alpha-design.
+Design study only. No prototype. All numbers theoretical. Open for feedback and collaboration.
 
 ---
 
